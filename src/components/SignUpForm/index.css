@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css?family=Numans');
+.logo {
+  align-self: center;
+}
+.login-container {
+  height: 100vh;
+
+  background-image: url('https://res.cloudinary.com/vinayreddy/image/upload/v1637162875/loginpage_s8m6yt.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw !important;
+  font-family: 'Numans', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  height: 420px;
+  margin-top: auto;
+  margin-bottom: auto;
+  max-width: 300px;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.social_icon span {
+  font-size: 30px;
+  margin-left: 10px;
+  margin-top: 23px;
+  color: #ffc312;
+}
+
+.social_icon span:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.card-header h3 {
+  color: white;
+}
+
+.social_icon {
+  position: absolute;
+  right: 20px;
+  top: -45px;
+}
+
+.input-group-prepend span {
+  width: 40px;
+  background-color: #ffc312;
+  color: black;
+  border: 0 !important;
+}
+.eye-icon {
+  background-color: white;
+  height: 38px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-size: 25px;
+  padding-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none !important;
+  border: 1px solid #ced4da !important;
+  border-left: 0px !important;
+}
+.password {
+  border-right: 0px !important;
+}
+input:focus {
+  outline: 0 0 0 0 !important;
+  box-shadow: 0 0 0 0 !important;
+}
+
+.remember {
+  color: white;
+}
+
+.login_btn {
+  color: black;
+  background-color: #ffc312;
+  width: 100px;
+}
+
+.login_btn:hover {
+  color: black;
+}
+
+.links {
+  color: white;
+}
+
+.links a {
+  margin-left: 4px;
+}
+.err-msg {
+  color: rgb(255, 1, 1);
+  text-align: center;
+  font-weight: 800;
+}
+.welcome-msg {
+  font-size: 18px;
+  color: white;
+  text-align: center;
+  color: aqua;
+}
