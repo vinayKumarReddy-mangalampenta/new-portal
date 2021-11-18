@@ -1,6 +1,13 @@
 .home {
   height: 100%;
-  padding: 35px 25px 0px 25px;
+  padding: 35px 0px 0px 0px;
+  margin-left: 50px;
+  margin-right: 35px;
+}
+.home-container {
+  background-color: rgb(250, 251, 254);
+  height: 100%;
+  padding-bottom: 30px;
 }
 .welcome-user-heading {
   font-family: 'Roboto';
@@ -52,6 +59,118 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+}
+.explore-all-tracks-container {
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  margin-top: 32px;
+  margin-bottom: 90px;
+}
+.explore-all {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  background: url(https://res.cloudinary.com/due4dmz2b/image/fetch/dpr_auto,w_auto,f_auto,q_auto/https://d1tgh8fmlzexmh.cloudfront.net/website/static-images/all_tracks_bg_2x.png)
+      right bottom / 50% 100% no-repeat,
+    url(https://res.cloudinary.com/due4dmz2b/image/fetch/dpr_auto,w_auto,f_auto,q_auto/https://d1tgh8fmlzexmh.cloudfront.net/website/static-images/explore_all_tracks_dots_bg_2x.png)
+      left top / 60% 100% no-repeat;
+  min-height: 348px;
+  margin-left: 50px;
+  margin-right: 35px;
+  object-fit: contain;
+  width: 100%;
+  border-radius: 16px;
+  border: 1px solid rgb(228, 231, 235);
+}
+.bg {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 350px;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+.text {
+  display: flex;
+  margin-left: 48px;
+  margin-top: 64px;
+  width: 45%;
+  letter-spacing: normal;
+  text-align: left;
+  line-height: 1.5;
+}
+.text > p {
+  font-family: 'Roboto';
+  white-space: pre-wrap;
+  font-weight: bold;
+  font-size: 24px;
+  color: rgb(24, 59, 86);
+}
+.button-container {
+  background-color: rgb(11, 105, 255);
+  margin-top: 32px;
+  margin-left: 48px;
+  margin-bottom: 62px;
+  min-height: 40px;
+  width: 163px;
+  box-shadow: none;
+  outline: none !important;
+  border: 0;
+  border-radius: 7px;
+}
+
+.btn-text {
+  font-family: 'Roboto';
+  white-space: pre-wrap;
+  font-size: 14px;
+  color: rgb(255, 255, 255) !important;
+  font-weight: bold;
+  text-transform: capitalize;
+  text-decoration: none !important;
+}
+
+@media (min-width: 320px) and (max-width: 1023px) {
+  .explore-all {
+    background: url(https://res.cloudinary.com/due4dmz2b/image/fetch/dpr_auto,w_auto,f_auto,q_auto/https://d1tgh8fmlzexmh.cloudfront.net/website/static-images/all_tracks_bg_2x.png)
+        center top / 100% 50% no-repeat,
+      url(https://res.cloudinary.com/due4dmz2b/image/fetch/dpr_auto,w_auto,f_auto,q_auto/https://d1tgh8fmlzexmh.cloudfront.net/website/static-images/explore_all_tracks_dots_bg_2x.png)
+        center bottom / 100% 95% no-repeat;
+    min-height: 464px;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    width: 90%;
+    margin-left: 50px;
+    margin-right: 35px;
+  }
+  .bg {
+    min-height: 264px;
+    flex-direction: column;
+    margin-top: 240px;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    align-items: center;
+  }
+  .text {
+    margin-left: 0px;
+    width: 85%;
+    text-align: center;
+    line-height: 1.5;
+    margin-top: 0px;
+  }
+  .text > p {
+    font-size: 16px;
+  }
+  .button-container {
+    margin-top: 32px;
+    margin-left: 0px;
+    margin-bottom: 32px;
+  }
 }
 @media (max-width: 767px) {
   .your-schedule {

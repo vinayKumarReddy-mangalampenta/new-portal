@@ -1,8 +1,11 @@
 import {Component} from 'react'
+import {Link} from 'react-router-dom'
 import Cookies from 'js-cookie'
 import Loader from 'react-loader-spinner'
 import {BsChevronRight} from 'react-icons/bs'
 import ScheduleButton from '../ScheduleButton'
+import HomeTracks from '../HomeTracks'
+import NextSessions from '../NextSessions'
 import Navbar from '../Navbar'
 
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css'
@@ -63,7 +66,7 @@ class Home extends Component {
 
   render() {
     const {isLoading, userDetails, tab} = this.state
-    const {username} = userDetails
+    const {name} = userDetails
     return (
       <>
         {isLoading ? (
@@ -74,7 +77,7 @@ class Home extends Component {
           <div className="home-container">
             <Navbar />
             <div className="home">
-              <h1 className="welcome-user-heading">Hi {username},</h1>
+              <h1 className="welcome-user-heading">Hi {name},</h1>
               <div className="your-schedule-container">
                 <h1 className="your-schedule">
                   Your Schedule{' '}
@@ -87,6 +90,32 @@ class Home extends Component {
                 </p>
               </div>
               {this.renderScheduleButtons()}
+              {tab === 'assingments' ? (
+                <h1> you have completed all </h1>
+              ) : (
+                <NextSessions />
+              )}
+              <HomeTracks />
+            </div>
+            <div className="explore-all-tracks-container">
+              <div className="explore-all">
+                <div className="bg">
+                  <div className="text">
+                    <p>
+                      CCBP 4.0 is powerfully designed with multiple course
+                      tracks to get you Industry ready with the most in-demand
+                      4.0 Tech and Management skills. Courses will be
+                      recommended for you as per your Individual Development
+                      Plan.
+                    </p>
+                  </div>
+                  <button type="button" className="button-container">
+                    <Link to="tracks/all" className="btn-text">
+                      Explore All Tracks{' '}
+                    </Link>
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         )}

@@ -1,0 +1,88 @@
+.track-list-item {
+  min-width: 250px !important;
+  width: 0%;
+  margin-left: 5px;
+  border-radius: 7px;
+  margin-right: 25px;
+
+  height: 335px;
+  overflow: hidden;
+}
+
+/*
+.track-list-item {
+  cursor: pointer;
+  background-color: rgb(255, 255, 255);
+  border-radius: 6px;
+
+  transition: transform 0.5s ease 0s;
+  width: 255px;
+  margin-right: 25px;
+  margin-left: 5px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  height: 340px;
+}*/
+.track-link {
+  text-decoration: none !important;
+}
+.track-list-item:hover {
+  transform: scale(1.04);
+}
+.image-container {
+  width: 100%;
+}
+.track-image {
+  width: 100%;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+}
+.progress-bar-container {
+  height: 5px;
+  border-radius: 0px;
+  bottom: 4px;
+
+  position: relative;
+
+  border-radius: 3px;
+  background-color: rgba(179, 189, 196, 0.5);
+}
+.progress-bar {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  border-radius: 0px 3px 3px 0px;
+  background: linear-gradient(
+    to right,
+    rgb(255, 78, 0) 0%,
+    rgb(236, 159, 5) 100%
+  );
+  width: 58.67%;
+}
+.details {
+  display: flex;
+  flex: 1 1 0%;
+  flex-direction: column;
+  overflow: hidden;
+}
+.description {
+  white-space: pre-wrap;
+  font-family: 'Roboto';
+  font-size: 14px;
+  color: rgb(53, 78, 110) !important;
+  line-height: 2;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.track-title {
+  font-family: 'Roboto';
+  font-weight: 500;
+  color: rgb(0, 35, 79) !important;
+  font-size: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
