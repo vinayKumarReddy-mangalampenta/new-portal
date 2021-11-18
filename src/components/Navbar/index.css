@@ -1,1 +1,30 @@
-/* Write your CSS code here */
+.toggler {
+  outline: none !important;
+  border: 0 !important;
+}
+.logo {
+  margin-left: 10px;
+}
+.link {
+  font-size: 20px;
+  font-weight: 500;
+  color: black !important;
+}
+.link:hover {
+  color: red !important;
+  border-bottom: 2px solid blue;
+}
+.profile {
+  height: 38px;
+  width: 38px;
+  background-color: rgb(82, 82, 180);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 27px;
+  padding-top: 15px;
+  border: 1px solid black;
+  border-radius: 100%;
+  margin-top: 9px;
+}

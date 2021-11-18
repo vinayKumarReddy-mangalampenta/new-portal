@@ -1,0 +1,17 @@
+.tab-button {
+  font-family: 'Roboto';
+  white-space: pre-wrap;
+  font-weight: 500;
+  font-size: 14px;
+  margin-right: 29px;
+  line-height: 1.71;
+  color: rgb(9, 103, 210);
+  border: 0;
+
+  cursor: pointer;
+  outline: none !important;
+  background-color: transparent;
+}
+.active-button {
+  border-bottom: 1px solid rgb(9, 103, 210);
+}

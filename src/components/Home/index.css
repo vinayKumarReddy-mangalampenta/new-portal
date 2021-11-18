@@ -1,1 +1,66 @@
-/* Write your CSS code here */
+.home {
+  height: 100%;
+  padding: 35px 25px 0px 25px;
+}
+.welcome-user-heading {
+  font-family: 'Roboto';
+  white-space: pre-wrap;
+  font-weight: 500;
+  font-size: 22px;
+  color: rgb(62, 76, 89);
+}
+.loader {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.your-schedule-container {
+  margin-top: 29px;
+}
+.your-schedule {
+  font-family: 'Roboto';
+  white-space: pre-wrap;
+  font-weight: bold;
+  font-size: 32px;
+  color: rgb(0, 48, 110);
+  line-height: 0.94;
+}
+.next-sessions {
+  white-space: pre-wrap;
+  font-family: 'Roboto';
+  font-size: 16px;
+  color: rgb(53, 78, 110);
+  line-height: 1.5;
+}
+.my-idp {
+  color: #0967d2;
+  font-weight: 740;
+  font-size: 18px;
+  margin-left: 10px;
+  display: inline-block;
+}
+.idp-arrow {
+  font-size: 12px;
+  color: #0967d2;
+}
+.button-list-container {
+  list-style-type: none;
+  margin-top: 19px;
+  padding: 0;
+  border-bottom: 1px solid rgba(123, 135, 148, 0.24);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+@media (max-width: 767px) {
+  .your-schedule {
+    font-size: 24px;
+  }
+  .welcome-user-heading {
+    font-size: 18px;
+  }
+  .next-sessions {
+    font-size: 14px;
+  }
+}

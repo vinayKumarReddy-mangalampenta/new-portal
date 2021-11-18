@@ -48,7 +48,7 @@ class LoginForm extends Component {
       username,
       password,
     }
-    console.log(JSON.stringify(data))
+
     const options = {
       method: 'POST',
       headers: {
