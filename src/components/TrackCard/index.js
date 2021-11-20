@@ -6,7 +6,7 @@ const TrackCard = props => {
   const {trackCard} = props
   const {trackName, description, trackImage} = trackCard
   return (
-    <li className="track-list-item shadow-sm">
+    <div className="track-list-item shadow-sm">
       <Link
         className="track-link"
         to={`/track/${trackName.toLowerCase().split(' ').join('-')}`}
@@ -22,7 +22,7 @@ const TrackCard = props => {
           <p className="description">{description}</p>
         </div>
       </Link>
-    </li>
+    </div>
   )
 }
 

@@ -7,6 +7,7 @@ import Home from './components/Home'
 import AllTracks from './components/AllTracks'
 import ImprovingPage from './components/ImprovingPage'
 import NotFound from './components/NotFound'
+import './App.css'
 
 const App = () => (
   <Switch>

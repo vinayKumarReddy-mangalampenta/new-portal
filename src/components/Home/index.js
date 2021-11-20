@@ -36,6 +36,7 @@ class Home extends Component {
       options,
     )
     const userDetails = await response.json()
+    console.log(response)
     this.setState({isLoading: false, userDetails})
   }
 
@@ -90,7 +91,7 @@ class Home extends Component {
                 </p>
               </div>
               {this.renderScheduleButtons()}
-              {tab === 'assingments' ? (
+              {tab === 'assignments' ? (
                 <h1> you have completed all </h1>
               ) : (
                 <NextSessions />
@@ -109,11 +110,11 @@ class Home extends Component {
                       Plan.
                     </p>
                   </div>
-                  <button type="button" className="button-container">
-                    <Link to="tracks/all" className="btn-text">
-                      Explore All Tracks{' '}
-                    </Link>
-                  </button>
+                  <Link to="tracks/all">
+                    <button type="button" className="button-container">
+                      <span className="btn-text">Explore All Tracks </span>
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>

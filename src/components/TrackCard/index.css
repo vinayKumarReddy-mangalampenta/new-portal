@@ -9,20 +9,6 @@
   overflow: hidden;
 }
 
-/*
-.track-list-item {
-  cursor: pointer;
-  background-color: rgb(255, 255, 255);
-  border-radius: 6px;
-
-  transition: transform 0.5s ease 0s;
-  width: 255px;
-  margin-right: 25px;
-  margin-left: 5px;
-  overflow: hidden;
-  margin-bottom: 30px;
-  height: 340px;
-}*/
 .track-link {
   text-decoration: none !important;
 }
@@ -85,4 +71,9 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+@media (max-width: 500px) {
+  .track-list-item {
+    min-width: 200px !important;
+  }
 }

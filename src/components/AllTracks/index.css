@@ -7,12 +7,24 @@
   height: 100%;
   padding-bottom: 30px;
 }
+.inner-container {
+  width: 90%;
+  padding: 5px;
+  display: block;
 
+  padding: 10px 0;
+  max-width: 308px;
+  color: #fff;
+  font-size: 50px;
+  text-align: center;
+  background-color: #0a9e88;
+  margin-left: 10px;
+  transition: all 0.1s ease;
+}
 .idp-tracks {
   list-style-type: none;
   display: flex;
   flex-direction: row;
-
   width: 100%;
   overflow: auto;
   margin: 0;
@@ -26,16 +38,24 @@
 .tracks-container {
   margin-top: 60px;
 }
+
 .track-group-heading {
   font-family: 'Roboto';
+  white-space: pre-wrap;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 20px;
   color: rgb(0, 48, 110);
-  letter-spacing: 0.4px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
-  white-space: nowrap;
-  margin-left: 10px;
+  width: fit-content;
+  margin-left: 5px;
 }
 .idp-tracks::-webkit-scrollbar {
   display: none;
+}
+.code {
+  width: 500px;
+  height: 300px;
 }

@@ -1,10 +1,11 @@
 import {Component} from 'react'
+
+import Loader from 'react-loader-spinner'
+import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css'
 import TrackCard from '../TrackCard'
 
-import './index.css'
-
 class HomeTracks extends Component {
-  state = {tracks: []}
+  state = {tracks: [], isLoading: true}
 
   componentDidMount() {
     this.getTracksData()
@@ -19,8 +20,8 @@ class HomeTracks extends Component {
       options,
     )
     const tracks = await response.json()
-    console.log(tracks)
-    this.setState({tracks})
+
+    this.setState({tracks, isLoading: false})
   }
 
   renderIdpTracks = () => {
@@ -28,11 +29,11 @@ class HomeTracks extends Component {
     const idpTracks = tracks.filter(each => each.idpTrack === 'true')
 
     return (
-      <ul className="idp-tracks">
+      <div className="idp-tracks ">
         {idpTracks.map(each => (
           <TrackCard key={each.trackId} trackCard={each} />
         ))}
-      </ul>
+      </div>
     )
   }
 
@@ -50,22 +51,31 @@ class HomeTracks extends Component {
   }
 
   render() {
+    const {isLoading} = this.state
     return (
       <div>
-        <div className="tracks-container">
-          <h1 className="track-group-heading">Tracks in your idp</h1>
-          {this.renderIdpTracks()}
-        </div>
-        <div className=" tracks-container">
-          <h1 className="track-group-heading">
-            EXPONENTIAL PERFORMANCE MINDSET 4.0
-          </h1>
-          {this.renderTracks('EXPONENTIAL PERFORMANCE MINDSET 4.0')}
-        </div>
-        <div className="tracks-container">
-          <h1 className="track-group-heading">community</h1>
-          {this.renderTracks('COMMUNITY')}
-        </div>
+        {isLoading ? (
+          <div className="loader">
+            <Loader type="Oval" color="red" height={25} width={25} />
+          </div>
+        ) : (
+          <>
+            <div className="tracks-container">
+              <h1 className="track-group-heading">Tracks in your idp</h1>
+              {this.renderIdpTracks()}
+            </div>
+            <div className=" tracks-container">
+              <h1 className="track-group-heading">
+                EXPONENTIAL PERFORMANCE MINDSET 4.0
+              </h1>
+              {this.renderTracks('EXPONENTIAL PERFORMANCE MINDSET 4.0')}
+            </div>
+            <div className="tracks-container">
+              <h1 className="track-group-heading">community</h1>
+              {this.renderTracks('COMMUNITY')}
+            </div>
+          </>
+        )}
       </div>
     )
   }

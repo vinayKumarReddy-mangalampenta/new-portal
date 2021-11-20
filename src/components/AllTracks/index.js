@@ -44,7 +44,7 @@ class AllTracks extends Component {
       <>
         {isLoading ? (
           <div className="loader">
-            <Loader type="Oval" color="blue" height={50} width={50} />
+            <Loader type="Oval" color="red" height={25} width={25} />
           </div>
         ) : (
           <div>
