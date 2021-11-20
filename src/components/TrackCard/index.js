@@ -12,7 +12,12 @@ const TrackCard = props => {
         to={`/track/${trackName.toLowerCase().split(' ').join('-')}`}
       >
         <div className="image-container">
-          <img src={trackImage} alt={trackName} className="track-image" />
+          <img
+            src={trackImage}
+            alt={trackName}
+            className="track-image"
+            draggable="false"
+          />
         </div>
         <div className="progress-bar-container">
           <span className="progress-bar"> </span>

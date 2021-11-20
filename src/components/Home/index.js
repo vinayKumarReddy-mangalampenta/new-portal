@@ -7,6 +7,7 @@ import ScheduleButton from '../ScheduleButton'
 import HomeTracks from '../HomeTracks'
 import NextSessions from '../NextSessions'
 import Navbar from '../Navbar'
+import Footer from '../Footer'
 
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css'
 
@@ -72,7 +73,7 @@ class Home extends Component {
       <>
         {isLoading ? (
           <div className="loader">
-            <Loader type="Oval" color="blue" height={50} width={50} />
+            <Loader type="Oval" color="blue" height={30} width={30} />
           </div>
         ) : (
           <div className="home-container">
@@ -118,6 +119,7 @@ class Home extends Component {
                 </div>
               </div>
             </div>
+            <Footer />
           </div>
         )}
       </>

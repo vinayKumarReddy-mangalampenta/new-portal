@@ -1,35 +1,59 @@
-.bgimg {
-  background-image: url('https://www.w3schools.com/w3images/forestbridge.jpg');
-  height: 100vh;
-  background-position: center;
-  background-size: cover;
-  position: relative;
-  color: white;
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 25px;
-}
-
-.topleft {
-  position: absolute;
-  top: 0;
-  left: 16px;
-}
-
-.bottomleft {
-  position: absolute;
-  bottom: 0;
-  left: 16px;
-}
-
-.middle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.locked-session-text {
+  font-family: 'roboto';
+  white-space: pre-wrap;
+  font-weight: 500;
+  font-size: 24px;
+  color: rgb(0, 48, 110);
+  margin-top: 24px;
   text-align: center;
 }
+.container {
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
+  align-items: center;
+}
+.lock-image {
+  max-width: 100%;
+  margin-top: 20px;
+}
+.course-name-con {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 
-hr {
-  margin: auto;
-  width: 40%;
+  box-shadow: rgb(31 45 61 / 15%) 0px 1px 2px 0px;
+  margin-bottom: 2px;
+}
+.course-name {
+  width: calc(100% - 58 px);
+  font-size: 14px;
+  letter-spacing: 0.4px;
+  line-height: 1.33;
+  font-weight: bold;
+  align-self: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  font-family: 'Roboto';
+  white-space: pre-wrap;
+  font-weight: bold;
+  font-size: 18px;
+  color: rgb(0, 48, 110);
+}
+.right-arrow {
+  align-self: stretch;
+  display: flex;
+  width: 46px;
+  color: white;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0, 48, 110);
+  cursor: pointer;
+  margin-right: 12px;
+}
+.arrow {
+  height: 70%;
 }

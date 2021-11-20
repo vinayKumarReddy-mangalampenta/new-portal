@@ -4,6 +4,7 @@ import Navbar from '../Navbar'
 import TrackCard from '../TrackCard'
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css'
 import './index.css'
+import Footer from '../Footer'
 
 class AllTracks extends Component {
   state = {tracks: [], isLoading: true}
@@ -44,12 +45,11 @@ class AllTracks extends Component {
       <>
         {isLoading ? (
           <div className="loader">
-            <Loader type="Oval" color="red" height={25} width={25} />
+            <Loader type="Oval" color="blue" height={30} width={30} />
           </div>
         ) : (
           <div>
             <Navbar />
-
             <div className="all-tracks-container">
               <div className="tracks-container">
                 <h1 className="track-group-heading">CCBP 4.0 FOUNDATIONS</h1>
@@ -83,6 +83,7 @@ class AllTracks extends Component {
                 {this.renderTracks('COMMUNITY')}
               </div>
             </div>
+            <Footer />
           </div>
         )}
       </>

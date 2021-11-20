@@ -1,27 +1,34 @@
+import {FaHandPointRight} from 'react-icons/fa'
+import Navbar from '../Navbar'
+
 import './index.css'
 
-const ImprovingPage = () => (
-  <div className="bgimg">
-    <div className="topleft">
-      <img
-        src="https://res.cloudinary.com/vinayreddy/image/upload/v1636516898/logo_klutqs.png"
-        alt="logo"
-        className="logo mt-5 ml-5"
-      />
+const ImprovingPage = props => {
+  const {match} = props
+  const {params} = match
+  const {trackId} = params
+  const courseName = trackId.split('-').join(' ')
+  return (
+    <div>
+      <Navbar />
+      <div className="course-name-con">
+        <div className="right-arrow">
+          <FaHandPointRight className="arrow" />{' '}
+        </div>
+        <h1 className="course-name">{courseName}</h1>
+      </div>
+      <div className="container">
+        <img
+          src="https://res.cloudinary.com/vinayreddy/image/upload/v1637430269/sessionlock_tib4ce.png"
+          alt="locked"
+          draggable="false"
+          className="lock-image"
+        />
+        <p className="locked-session-text">
+          Currently this session is locked for you
+        </p>
+      </div>
     </div>
-    <div className="middle">
-      <h1>
-        SORRY FOR INTERRUPTION <br /> WE ARE WORKING ON IT <br />
-        COMING SOON
-        <br />
-        BEFORE THAT COMPLETE <a href="/">this,click here</a>
-      </h1>
-      <hr />
-    </div>
-    <div className="bottomleft">
-      <p>We will Let u Know Soon!!!</p>
-    </div>
-  </div>
-)
-
+  )
+}
 export default ImprovingPage

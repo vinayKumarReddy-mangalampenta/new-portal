@@ -6,18 +6,22 @@ import ProtectedRoute from './components/ProtectedRoute'
 import Home from './components/Home'
 import AllTracks from './components/AllTracks'
 import ImprovingPage from './components/ImprovingPage'
+import Footer from './components/Footer'
 import NotFound from './components/NotFound'
 import './App.css'
 
 const App = () => (
-  <Switch>
-    <Route exact path="/login" component={LoginForm} />
-    <Route exact path="/signup" component={SignUpForm} />
-    <ProtectedRoute exact path="/" component={Home} />
-    <ProtectedRoute exact path="/tracks/all" component={AllTracks} />
-    <ProtectedRoute exact path="/track/:trackId" component={ImprovingPage} />
-    <ProtectedRoute component={NotFound} />
-  </Switch>
+  <>
+    <Switch>
+      <Route exact path="/login" component={LoginForm} />
+      <Route exact path="/signup" component={SignUpForm} />
+      <ProtectedRoute exact path="/" component={Home} />
+      <ProtectedRoute exact path="/tracks/all" component={AllTracks} />
+      <ProtectedRoute exact path="/track/:trackId" component={ImprovingPage} />
+      <ProtectedRoute component={NotFound} />
+    </Switch>
+  </>
 )
 export default App
-// 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
+
+// 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
