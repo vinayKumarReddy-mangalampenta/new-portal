@@ -1,5 +1,6 @@
 {
   "name": "ccbp-portal",
+  "homepage": "https://vinayKumarReddy-mangalampenta.github.io/new-portal/",
   "private": true,
   "version": "1.0.0",
   "engines": {
@@ -11,6 +12,7 @@
     "@testing-library/react": "11.2.5",
     "@testing-library/user-event": "12.6.2",
     "chalk": "4.1.0",
+    "gh-pages": "3.2.3",
     "history": "5.0.0",
     "js-cookie": "2.2.1",
     "msw": "0.28.1",
