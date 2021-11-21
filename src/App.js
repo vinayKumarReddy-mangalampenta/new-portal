@@ -6,7 +6,7 @@ import ProtectedRoute from './components/ProtectedRoute'
 import Home from './components/Home'
 import AllTracks from './components/AllTracks'
 import ImprovingPage from './components/ImprovingPage'
-
+import Ibcom from './components/Ibcom'
 import NotFound from './components/NotFound'
 import './App.css'
 
@@ -20,6 +20,7 @@ const App = () => (
       <ProtectedRoute exact path="/track/:trackId" component={ImprovingPage} />
       <ProtectedRoute component={NotFound} />
     </Switch>
+    <Ibcom />
   </>
 )
 export default App
