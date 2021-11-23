@@ -39,6 +39,10 @@ const SessionPage = props => {
               <FaHandPointLeft className="arrow" />{' '}
             </button>
           </div>
+          <div className="topic">
+            <p>Introduction to industrial revolutions part 1 </p>
+            <span>&gt;</span>
+          </div>
         </div>
 
         <button

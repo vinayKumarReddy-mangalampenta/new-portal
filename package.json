@@ -1,7 +1,5 @@
 {
   "name": "ccbp-portal",
-  "homepage": "https://vinayKumarReddy-mangalampenta.github.io/new-portal/",
-  "proxy": "http://localhost:3001/",
   "private": true,
   "version": "1.0.0",
   "engines": {

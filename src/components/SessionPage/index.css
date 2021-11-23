@@ -85,7 +85,7 @@
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: rgb(2, 28, 73);
+  background-color: rgb(27, 69, 141);
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -132,6 +132,17 @@
 }
 .index {
   width: 250px !important;
+}
+
+.topic {
+  background-color: rgb(49, 67, 99);
+  padding-left: 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+.topic > span {
+  margin-right: 29px;
 }
 
 @media screen and (max-height: 450px) {

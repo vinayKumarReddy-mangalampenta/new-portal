@@ -79,8 +79,12 @@ class AllTracks extends Component {
               </div>
 
               <div className="tracks-container">
-                <h1 className="track-group-heading">community</h1>
+                <h1 className="track-group-heading">COMMUNITY</h1>
                 {this.renderTracks('COMMUNITY')}
+              </div>
+              <div className="tracks-container">
+                <h1 className="track-group-heading">FELLOWSHIP PROGRAM</h1>
+                {this.renderTracks('FELLOWSHIP PROGRAM')}
               </div>
             </div>
             <Footer />
