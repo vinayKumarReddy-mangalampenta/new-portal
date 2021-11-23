@@ -20,41 +20,41 @@ const Footer = () => (
               className="footer-logo "
               draggable="false"
             />
-            <div className="icons-con">
-              <a
-                href="https://www.facebook.com/nxtwave.tech"
-                rel="noreferrer"
-                target="_blank"
-                className="icon-con a"
-              >
-                <GrFacebookOption />
-              </a>
-              <a
-                href="https://www.twitter.com/nxtwave.tech"
-                rel="noreferrer"
-                target="_blank"
-                className="icon-con b"
-              >
-                <GrTwitter />
-              </a>
-              <a
-                href="https://www.linkedin.com/feed/update/urn:li:activity:6775759346841346048/"
-                rel="noreferrer"
-                target="_blank"
-                className="icon-con c"
-              >
-                <GrLinkedinOption />
-              </a>
-              <a
-                href="https://www.youtube.com/channel/UCLlHgusuRTH6H4QQdYNwzoQ"
-                rel="noreferrer"
-                target="_blank"
-                className="icon-con d"
-              >
-                <GrYoutube />
-              </a>
-            </div>
           </a>
+          <div className="icons-con">
+            <a
+              href="https://www.facebook.com/nxtwave.tech"
+              rel="noreferrer"
+              target="_blank"
+              className="icon-con a"
+            >
+              <GrFacebookOption />
+            </a>
+            <a
+              href="https://www.twitter.com/nxtwave.tech"
+              rel="noreferrer"
+              target="_blank"
+              className="icon-con b"
+            >
+              <GrTwitter />
+            </a>
+            <a
+              href="https://www.linkedin.com/feed/update/urn:li:activity:6775759346841346048/"
+              rel="noreferrer"
+              target="_blank"
+              className="icon-con c"
+            >
+              <GrLinkedinOption />
+            </a>
+            <a
+              href="https://www.youtube.com/channel/UCLlHgusuRTH6H4QQdYNwzoQ"
+              rel="noreferrer"
+              target="_blank"
+              className="icon-con d"
+            >
+              <GrYoutube />
+            </a>
+          </div>
         </div>
         <div className="section2">
           <p className="quick-links"> QUICK LINKS</p>

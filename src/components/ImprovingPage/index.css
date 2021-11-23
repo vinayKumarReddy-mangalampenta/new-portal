@@ -27,7 +27,7 @@
   margin-bottom: 2px;
 }
 .course-name {
-  width: calc(100% - 58 px);
+  width: calc(100% - 58px);
   font-size: 14px;
   letter-spacing: 0.4px;
   line-height: 1.33;
