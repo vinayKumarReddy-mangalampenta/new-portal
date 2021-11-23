@@ -61,7 +61,6 @@ class SignUpForm extends Component {
       name,
       password,
     }
-    console.log(data)
 
     const options = {
       method: 'POST',
@@ -71,7 +70,7 @@ class SignUpForm extends Component {
       },
       body: JSON.stringify(data),
     }
-    const url = '/register'
+    const url = 'https://vinni-server.herokuapp.com/register'
     const response = await fetch(url, options)
     const dbRes = await response.json()
 

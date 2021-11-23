@@ -57,7 +57,7 @@ class LoginForm extends Component {
       },
       body: JSON.stringify(data),
     }
-    const url = '/login'
+    const url = 'https://vinni-server.herokuapp.com/login'
     const response = await fetch(url, options)
     const dbRes = await response.json()
     console.log(dbRes)

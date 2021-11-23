@@ -32,7 +32,10 @@ class Home extends Component {
       body: JSON.stringify(data),
     }
 
-    const response = await fetch('/userdetails', options)
+    const response = await fetch(
+      'https://vinni-server.herokuapp.com/userdetails',
+      options,
+    )
     const userDetails = await response.json()
     console.log(response)
     this.setState({isLoading: false, userDetails})
