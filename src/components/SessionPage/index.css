@@ -1,0 +1,167 @@
+.locked-session-text {
+  font-family: 'roboto';
+  white-space: pre-wrap;
+  font-weight: 500;
+  font-size: 24px;
+  color: rgb(0, 48, 110);
+  margin-top: 24px;
+  text-align: center;
+}
+.container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px !important;
+  margin: auto;
+}
+.lock-image {
+  max-width: 100%;
+  margin-top: 20px;
+}
+.course-name-con {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+  box-shadow: rgb(31 45 61 / 15%) 0px 1px 2px 0px;
+  margin-bottom: 2px;
+}
+.course-name {
+  font-size: 14px;
+  letter-spacing: 0.4px;
+  line-height: 1.33;
+  font-weight: bold;
+  align-self: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  font-family: 'Roboto';
+  white-space: pre-wrap;
+  font-weight: bold;
+  font-size: 18px;
+  color: rgb(0, 48, 110);
+}
+.right-arrow {
+  align-self: stretch;
+  display: flex;
+  width: 46px;
+  color: white;
+  height: 100%;
+  min-height: 60px;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0, 48, 110);
+  cursor: pointer;
+  margin-right: 12px;
+}
+.arrow {
+  height: 70%;
+}
+.black {
+  height: 50px;
+  width: 78%;
+  background-color: black;
+}
+.select-lang-con {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.video {
+  width: 77.9%;
+  height: 390px;
+}
+.select-tag {
+  outline: none;
+  margin-right: 18px;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(2, 28, 73);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.closing-button,
+.opening-button {
+  outline: none !important;
+  border: 0 !important;
+  color: white;
+}
+.closing-button {
+  background-color: transparent;
+  right: 0;
+  align-self: flex-end;
+  font-size: 30px;
+  margin: 18px 18px;
+}
+
+.sidebar-heading {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.content {
+  color: blue;
+  text-decoration: underline;
+  font-size: 28px;
+}
+.index {
+  width: 250px !important;
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {
+    padding-top: 15px;
+  }
+  .sidebar a {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 650px) {
+  .black,
+  .video {
+    width: 100%;
+  }
+  .video {
+    height: auto;
+  }
+  .index {
+    width: 190px !important;
+  }
+}
+@media (min-width: 650px) {
+  .when-bar-open-con {
+    width: calc(100% - 250px) !important;
+    margin-left: 290px !important;
+  }
+
+  .when-bar-open-name {
+    margin-left: 220px;
+  }
+}

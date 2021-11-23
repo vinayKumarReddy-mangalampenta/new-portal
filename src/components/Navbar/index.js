@@ -6,7 +6,7 @@ import './index.css'
 import 'sz-navbar'
 
 class Navbar extends Component {
-  state = {userDetails: {}}
+  state = {name: '', userImg: ''}
 
   componentDidMount() {
     this.getUserData()
@@ -24,12 +24,13 @@ class Navbar extends Component {
       body: JSON.stringify(data),
     }
 
-    const response = await fetch(
-      'https://ccbp-server.herokuapp.com/userdetails',
-      options,
-    )
+    const response = await fetch('/userdetails', options)
     const userDetails = await response.json()
-    this.setState({userDetails})
+
+    this.setState({
+      name: userDetails.name,
+      userImg: userDetails.userImg,
+    })
   }
 
   onLogout = () => {
@@ -44,6 +45,8 @@ class Navbar extends Component {
   }
 
   render() {
+    const {name, userImg} = this.state
+
     return (
       <nav className="sz-navbar bg-white navbar  ">
         <div className="sz-navbar-inner sz-navbar-right">
@@ -66,13 +69,30 @@ class Navbar extends Component {
           </label>
 
           <ul className="sz-navbar-items nav-width">
+            <li className="profile-mobile-view  d-md-none">
+              <div className="profile mr-4">
+                {userImg === null ? (
+                  <p className="initial">{name.slice(0, 1)}</p>
+                ) : (
+                  <img
+                    draggable="false"
+                    src={userImg}
+                    className="navbar-user-dp"
+                    alt={name}
+                  />
+                )}
+              </div>
+              <span>
+                <b>{name}</b>{' '}
+              </span>
+            </li>
             <li className="nav-item sz-navbar-item active">
               <a className="nav-link link" href="/">
                 HOME <span className="sr-only">(current)</span>
               </a>
             </li>
             <li className="nav-item sz-navbar-item">
-              <a className="nav-link link " href="/">
+              <a className="nav-link link " href="/profile">
                 PROFILE
               </a>
             </li>
@@ -82,7 +102,7 @@ class Navbar extends Component {
                 MY DISCUSSIONS
               </a>
             </li>
-            <li className="nav-item ">
+            <li>
               <button
                 type="button"
                 onClick={this.onLogout}
@@ -91,9 +111,18 @@ class Navbar extends Component {
                 Logout
               </button>
             </li>
-            <li className="ml-2 mb-2 d-none d-lg-block ">
+            <li className="ml-2 mb-2 d-none d-md-block ">
               <div className="profile">
-                <p>c</p>
+                {userImg === null ? (
+                  <p className="initial">{name.slice(0, 1)}</p>
+                ) : (
+                  <img
+                    draggable="false"
+                    src={userImg}
+                    className="navbar-user-dp"
+                    alt={name}
+                  />
+                )}
               </div>
             </li>
           </ul>

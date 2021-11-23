@@ -17,10 +17,7 @@ class AllTracks extends Component {
     const options = {
       method: 'GET',
     }
-    const response = await fetch(
-      'https://ccbp-server.herokuapp.com/tracks',
-      options,
-    )
+    const response = await fetch('/tracks', options)
     const tracks = await response.json()
     console.log(tracks)
     this.setState({tracks, isLoading: false})

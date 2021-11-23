@@ -1,5 +1,6 @@
 import {Component} from 'react'
 import {Redirect} from 'react-router-dom'
+
 import Cookies from 'js-cookie'
 import Loader from 'react-loader-spinner'
 import {IoEyeOff} from 'react-icons/io5'
@@ -60,6 +61,7 @@ class SignUpForm extends Component {
       name,
       password,
     }
+    console.log(data)
 
     const options = {
       method: 'POST',
@@ -69,7 +71,7 @@ class SignUpForm extends Component {
       },
       body: JSON.stringify(data),
     }
-    const url = 'https://ccbp-server.herokuapp.com/register'
+    const url = '/register'
     const response = await fetch(url, options)
     const dbRes = await response.json()
 
@@ -90,10 +92,11 @@ class SignUpForm extends Component {
     if (jwtToken !== undefined) {
       return <Redirect to="/" />
     }
+
     return (
       <div className="login-container">
         <div className="d-flex justify-content-center h-100">
-          <div className="card">
+          <div className="card signup-card">
             <div className="card-header">
               <h3>Signup</h3>
               <div className="d-flex justify-content-end social_icon">
@@ -119,6 +122,7 @@ class SignUpForm extends Component {
                 <a href="/login">Login page</a>
               </h1>
             )}
+            {isError && <p className="err-msg ">*{errMsg}</p>}
             <div className="card-body">
               <form onSubmit={this.onSubmitForm}>
                 <div className="input-group form-group">
@@ -183,7 +187,7 @@ class SignUpForm extends Component {
                 </div>
               </form>
             </div>
-            {isError && <p className="err-msg ">*{errMsg}</p>}
+
             <div className="card-footer">
               <div className="d-flex justify-content-center links">
                 Already have Account<a href="/login">Login</a>

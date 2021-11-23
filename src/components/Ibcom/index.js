@@ -19,9 +19,19 @@ const Ibcom = () => {
     <div className="ibcom-container">
       <div className="personal-manager d-none">
         <span>Personal Manager</span>
+        <img
+          src="https://learning.ccbp.in/images/personalManager.png"
+          className="pm"
+          alt="pm"
+        />
       </div>
-      <div className="btn-con">
-        <a href="ccbp.in" target="_blank" className="download-button d-none">
+      <div className="btn-con mt-5">
+        <a
+          href="https://play.google.com/store/apps/details?id=co.ibhubs.chat"
+          target="_blank"
+          className="download-button d-none"
+          rel="noreferrer"
+        >
           <p>download</p>
         </a>
         <button
@@ -40,7 +50,6 @@ const Ibcom = () => {
             alt="close"
           />
         </button>
-        s
       </div>
     </div>
   )

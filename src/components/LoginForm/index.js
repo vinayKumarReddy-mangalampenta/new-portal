@@ -57,7 +57,7 @@ class LoginForm extends Component {
       },
       body: JSON.stringify(data),
     }
-    const url = 'https://ccbp-server.herokuapp.com/login'
+    const url = '/login'
     const response = await fetch(url, options)
     const dbRes = await response.json()
     console.log(dbRes)

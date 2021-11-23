@@ -16,8 +16,8 @@
   align-items: center;
 }
 
-.card {
-  height: 420px;
+.signup-card {
+  height: 470px !important;
   margin-top: auto;
   margin-bottom: auto;
   max-width: 300px;

@@ -1,6 +1,66 @@
 .next-session-card {
-  border: 1px solid rgba(123, 135, 148, 0.24);
-  width: 330px;
-  border-radius: 20px;
-  background-color: white;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+  width: 298px;
+  max-width: 100%;
+  min-height: 238px;
+  padding: 32px;
+  margin: 15px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 16px;
+  border: 1px solid rgb(228, 231, 235);
+}
+.next-session-heading {
+  font-family: 'roboto';
+  white-space: pre-wrap;
+  font-weight: 500;
+  font-size: 18px;
+  color: rgb(82, 96, 109);
+  margin-bottom: 20px;
+  line-height: 1.33;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+}
+.icon-right {
+  font-size: 18px !important;
+  margin-bottom: 6px;
+}
+.topic-name {
+  white-space: pre-wrap;
+  font-family: 'Roboto';
+  font-size: 14px;
+  color: rgb(97, 110, 124);
+  line-height: 20pt;
+}
+.sub-topic {
+  display: flex;
+  width: 90%;
+  flex-shrink: 2;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6px;
+}
+.sub-topic-text {
+  font-family: 'roboto';
+  font-size: 12px;
+
+  color: rgb(97, 110, 124);
+  margin-top: -4px;
+}
+.timer {
+  color: rgb(97, 110, 124);
+}
+.start-button {
+  min-width: 59px;
+  width: 59px;
+  margin-right: 24px;
+  background-color: rgb(9, 103, 210);
+  box-shadow: none;
+  outline: none !important;
+  border: 0;
+  border-radius: 5px;
+  color: white;
 }

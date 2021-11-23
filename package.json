@@ -1,6 +1,7 @@
 {
   "name": "ccbp-portal",
   "homepage": "https://vinayKumarReddy-mangalampenta.github.io/new-portal/",
+  "proxy": "http://localhost:3001/",
   "private": true,
   "version": "1.0.0",
   "engines": {
@@ -23,7 +24,8 @@
     "react-router-dom": "5.2.0",
     "react-slick": "0.28.1",
     "slick-carousel": "1.8.1",
-    "sz-navbar": "1.0.2"
+    "sz-navbar": "1.0.2",
+    "uuid": "8.3.2"
   },
   "devDependencies": {
     "eslint-config-airbnb": "18.2.1",
