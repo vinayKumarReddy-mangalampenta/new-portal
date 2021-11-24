@@ -1,5 +1,6 @@
 {
   "name": "ccbp-portal",
+  "homepage": "https://vinayKumarReddy-mangalampenta.github.io/new-portal/",
   "private": true,
   "version": "1.0.0",
   "engines": {
@@ -37,6 +38,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "lint": "eslint .",
