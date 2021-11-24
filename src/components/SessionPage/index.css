@@ -126,7 +126,7 @@
   align-items: center;
 }
 .content {
-  color: blue;
+  color: black;
   text-decoration: underline;
   font-size: 28px;
 }
@@ -163,7 +163,10 @@
     height: auto;
   }
   .index {
-    width: 190px !important;
+    width: 200px !important;
+  }
+  .right-arrow {
+    min-height: 76px !important;
   }
 }
 @media (min-width: 650px) {

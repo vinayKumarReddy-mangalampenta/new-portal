@@ -22,7 +22,7 @@ class AllTracks extends Component {
       options,
     )
     const tracks = await response.json()
-    console.log(tracks)
+
     this.setState({tracks, isLoading: false})
   }
 

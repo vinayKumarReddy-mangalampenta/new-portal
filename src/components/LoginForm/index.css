@@ -24,14 +24,14 @@
   background-color: rgba(0, 0, 0, 0.5) !important;
 }
 
-.social_icon span {
+.social_icon a {
   font-size: 30px;
   margin-left: 10px;
   margin-top: 23px;
   color: #ffc312;
 }
 
-.social_icon span:hover {
+.social_icon a:hover {
   color: white;
   cursor: pointer;
 }
@@ -46,7 +46,7 @@
   top: -45px;
 }
 
-.input-group-prepend span {
+.input-group-prepend span a {
   width: 40px;
   background-color: #ffc312;
   color: black;

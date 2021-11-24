@@ -36,9 +36,14 @@ class Home extends Component {
       'https://vinni-server.herokuapp.com/userdetails',
       options,
     )
-    const userDetails = await response.json()
-    console.log(response)
-    this.setState({isLoading: false, userDetails})
+    if (response.ok === true) {
+      const userDetails = await response.json()
+      this.setState({isLoading: false, userDetails})
+    } else {
+      Cookies.remove('jwt_token')
+      const {history} = this.props
+      history.replace('/login')
+    }
   }
 
   changeCategory = tab => {
@@ -93,7 +98,17 @@ class Home extends Component {
               </div>
               {this.renderScheduleButtons()}
               {tab === 'assignments' ? (
-                <h1> you have completed all </h1>
+                <div>
+                  <h1>Hurrah!!</h1>
+                  <img
+                    src="https://tse4.mm.bing.net/th?id=OIP.7Mii7O-69tn-MM0I7705-gHaFs&pid=Api&P=0&w=234&h=181"
+                    className="assignments"
+                    alt="completed"
+                  />
+                  <p>
+                    Check back tomorrow <br /> for next assignments
+                  </p>
+                </div>
               ) : (
                 <NextSessions />
               )}

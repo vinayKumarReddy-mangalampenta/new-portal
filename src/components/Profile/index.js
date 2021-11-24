@@ -15,6 +15,7 @@ class Profile extends Component {
     isLoading: true,
     showUploadButton: false,
     btnLoading: false,
+    imageUploading: false,
   }
 
   componentDidMount() {
@@ -77,7 +78,7 @@ class Profile extends Component {
       body: JSON.stringify(data),
     }
 
-    await fetch('/upload', options)
+    await fetch('https://vinni-server.herokuapp.com/upload', options)
 
     this.setState({isLoading: false, btnLoading: false})
     document.querySelector('.update-msg').classList.toggle('d-none')
@@ -85,6 +86,7 @@ class Profile extends Component {
   }
 
   onChangeImage = async e => {
+    this.setState({imageUploading: true})
     const {files} = e.target
 
     const data = new FormData()
@@ -103,7 +105,11 @@ class Profile extends Component {
 
     const secureUrl = file.secure_url
 
-    this.setState({userImg: secureUrl, showUploadButton: true})
+    this.setState({
+      userImg: secureUrl,
+      showUploadButton: true,
+      imageUploading: false,
+    })
   }
 
   render() {
@@ -114,6 +120,7 @@ class Profile extends Component {
       userImg,
       showUploadButton,
       btnLoading,
+      imageUploading,
     } = this.state
 
     return (
@@ -149,6 +156,7 @@ class Profile extends Component {
             </div>
 
             <div className="user-details-con">
+              {imageUploading && <p className="update-msg ">uploading image</p>}
               <p className="update-msg d-none">profile updated</p>
               {showUploadButton && (
                 <button

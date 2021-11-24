@@ -100,13 +100,31 @@ class SignUpForm extends Component {
               <h3>Signup</h3>
               <div className="d-flex justify-content-end social_icon">
                 <span>
-                  <FaFacebookF />
+                  <a
+                    href="https://www.facebook.com/nxtwave.tech"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    <FaFacebookF />
+                  </a>
                 </span>
                 <span>
-                  <FaLinkedinIn />
+                  <a
+                    href="https://www.linkedin.com/feed/update/urn:li:activity:6775759346841346048/"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    <FaLinkedinIn />
+                  </a>
                 </span>
                 <span>
-                  <BsTwitter />
+                  <a
+                    href="https://www.twitter.com/nxtwave.tech"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    <BsTwitter />
+                  </a>
                 </span>
               </div>
             </div>

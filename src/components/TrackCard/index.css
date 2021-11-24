@@ -74,6 +74,6 @@
 }
 @media (max-width: 500px) {
   .track-list-item {
-    min-width: 200px !important;
+    min-width: 245px !important;
   }
 }

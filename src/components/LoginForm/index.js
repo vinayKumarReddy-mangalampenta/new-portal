@@ -60,10 +60,9 @@ class LoginForm extends Component {
     const url = 'https://vinni-server.herokuapp.com/login'
     const response = await fetch(url, options)
     const dbRes = await response.json()
-    console.log(dbRes)
+
     if (response.ok !== true) {
       this.setState({isError: true, errMsg: dbRes.error_msg, isLoading: false})
-      console.log(dbRes.error_msg)
     } else {
       this.onLoginSuccess(dbRes.jwt_token)
     }
@@ -87,13 +86,31 @@ class LoginForm extends Component {
               <h3>Login</h3>
               <div className="d-flex justify-content-end social_icon">
                 <span>
-                  <FaFacebookF />
+                  <a
+                    href="https://www.facebook.com/nxtwave.tech"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    <FaFacebookF />
+                  </a>
                 </span>
                 <span>
-                  <FaLinkedinIn />
+                  <a
+                    href="https://www.linkedin.com/feed/update/urn:li:activity:6775759346841346048/"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    <FaLinkedinIn />
+                  </a>
                 </span>
                 <span>
-                  <BsTwitter />
+                  <a
+                    href="https://www.twitter.com/nxtwave.tech"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    <BsTwitter />
+                  </a>
                 </span>
               </div>
             </div>
